@@ -10,7 +10,6 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   StatusBar,
 } from 'react-native';
@@ -27,14 +26,14 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar barStyle="dark-content" />
-        <Stack.Navigator headerMode="none">
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{ title: 'Welcome' }}
-          />
-          <Stack.Screen name="Profile" component={Profile} />
-        </Stack.Navigator>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: 'Welcome' }}
+        />
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
