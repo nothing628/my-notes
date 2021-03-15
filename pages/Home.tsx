@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     scrollView: {},
     body: {}
 })
+declare const global: { HermesInternal: null | {} };
 
 const Home = () => {
     const navigation = useNavigation();
@@ -13,6 +14,11 @@ const Home = () => {
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             style={styles.scrollView}>
+            {global.HermesInternal == null ? null : (
+                <View>
+                    <Text>Engine: Hermes</Text>
+                </View>
+            )}
             <View style={styles.body}>
                 <Text>Home Page</Text>
                 <Button

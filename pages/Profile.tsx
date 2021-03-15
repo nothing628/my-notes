@@ -22,7 +22,7 @@ const Profile = () => {
                 <Button
                     title="Go to Home"
                     onPress={() =>
-                        navigation.navigate('Home')
+                        navigation.goBack()
                     }
                 />
             </View>
